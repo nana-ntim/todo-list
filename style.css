@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lexend:wght@200;300;400&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+*{
+    list-style: none;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+body{
+    background-color: #f8f7f4;
+    display: flex;
+    min-height: 140vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container{
+    min-width: auto;
+    max-width: 500px;
+}
+
+.title{
+    text-align: center;
+    color: #5b4f47;
+    font-family: 'Lexend', sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 3rem;
+}
+
+.data-container{
+    margin: 30px 0 30px 0;
+    background-color: #ededd5;
+    border-radius: 10px ;
+    padding: 10px 40px 10px 40px;
+}
+
+.data-container:hover{
+    border: 0.05rem solid #5b4f47;
+}
+
+.task{
+    margin: 10px 10px 10px 10px;
+    font-family: 'Lexend', sans-serif;
+    letter-spacing: 0.1rem;
+    color: #5b4f47;
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+.checkbox{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox__input{
+    display: none;
+}
+
+.checkbox__box{
+    width: 1.35em;
+    height: 1.35em;
+    margin-right: 10px;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #f8f7f4;
+}
+
+.checkbox__input:checked + .checkbox__box{
+    background-color: #5b4f47;
+}
+
+.checkbox__input:checked + .checkbox__box + .task{
+    text-decoration: line-through;
+    color: #5b4f47;
+}
+
+.checkbox__input:checked + .checkbox__box::after{
+    content: '\2714';
+    color: white;
+    font-size: 10px;
+}
+
+.alignment{
+    width: 100%;
+    text-align: center;
+}
+
+.addTask{
+    border-style: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #5b4f47;
+    font-size: 25px;
+    color: white;
+}
+
+.addTask:hover{
+    background-color: #654b02;
+}
